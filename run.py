@@ -27,8 +27,11 @@ def connexion_ftp(fichier_config):
     ftp = FTP()
 
     # Connexion au serveur FTP
-    ftp.connect(data["ip"], data["port"])
+    ftp.connect(data["ip"], int(data["port"]))
     ftp.login(data["username"], data["password"])
+
+    # Affichage d'un message indiquant que la connexion a réussi
+    print("Connexion réussie !")
 
     # Retour de l'instance de la classe FTP
     return ftp
