@@ -1,2 +1,5 @@
 # Cache python 
 __pycache__/main.cpython-311.pyc
+
+# Fichier de configuration des serveur FTP
+serveursFTP
