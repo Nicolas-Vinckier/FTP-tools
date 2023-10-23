@@ -1,6 +1,6 @@
 import json
 import os
-from ftplib import FTP
+import ftplib
 
 
 # Fonction d'initialisation
