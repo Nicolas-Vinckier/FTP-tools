@@ -54,6 +54,7 @@ def main():
 # Fonction d'affichage du menu utilisateur
 def menu_utilisateur():
     # Affichage du menu utilisateur
+    print("===== Menu principal =====")
     print("1. Connexion au serveur FTP")
     print("2. Ajout d'un nouveau serveur FTP")
     print("3. Quitter")
