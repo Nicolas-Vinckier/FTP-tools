@@ -4,7 +4,7 @@
 
 ## Description
 
-Ce projet a pour but de fournir des outils pour faciliter la gestion de serveurs FTP.
+FTP-tools est un ensemble d'outils conçus pour faciliter la gestion de serveurs FTP. Les fonctionnalités incluent la recherche, le téléchargement, l'upload et la suppression de fichiers, ainsi que des tests de ping et de vitesse de téléchargement. Le programme est écrit en Python et peut être installé à l'aide de pip et virtualenv. Veuillez noter que ce projet est en cours de développement et n'est pas encore fonctionnel.
 
 ## Fonctionnalités
 
