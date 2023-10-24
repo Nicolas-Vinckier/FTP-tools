@@ -12,7 +12,7 @@ Ce projet a pour but de fournir des outils pour faciliter la gestion de serveurs
 - [ ] Téléchargement de fichiers
 - [ ] Upload de fichiers
 - [ ] Suppression de fichiers
-- [ ] Test de ping
+- [x] Test de ping
 - [x] Test de vitesse de téléchargement
 
 ## Installation
