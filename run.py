@@ -2,7 +2,7 @@ import os
 import json
 import ftplib
 from outils.create_ftp import new_ftp_server
-from outils.connexion import connexion_ftp, select_server
+from outils.connexion import connexion_ftp, select_server, menu_connexion
 
 
 # Fonction d'initialisation
@@ -37,8 +37,12 @@ def main():
             # Affichage du répertoire courant
             print(ftp.pwd())
 
+            # Menu de connexion
+            menu_connexion(ftp)
+
             # Fermeture de la connexion au serveur FTP
             ftp.close()
+
         elif choix == 2:
             # Ajout d'un nouveau serveur FTP
             new_ftp_server()
