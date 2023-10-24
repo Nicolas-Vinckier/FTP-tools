@@ -47,6 +47,8 @@ def main():
             # Ajout d'un nouveau serveur FTP
             new_ftp_server()
         elif choix == 3:
+            print("Au revoir, à bientôt ! :)")
+
             # Quitter le programme
             break
 
