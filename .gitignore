@@ -1,5 +1,6 @@
 # Cache python & IDE
-__pycache__/main.cpython-311.pyc
+__pycache__
+outils/__pycache__
 .vscode 
 
 # Fichier de configuration des serveur FTP
