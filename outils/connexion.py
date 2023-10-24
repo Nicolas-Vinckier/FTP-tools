@@ -28,6 +28,7 @@ def select_server():
     fichiers = os.listdir("serveursFTP")
 
     # Affichage de la liste des fichiers de configuration
+    print("===== Liste des serveurs FTP =====")
     for i, fichier in enumerate(fichiers):
         print(f"{i + 1}. {fichier}")
 
