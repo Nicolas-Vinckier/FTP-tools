@@ -2,6 +2,7 @@ import os
 import json
 import ftplib
 import time
+import subprocess
 
 
 def connexion_ftp(fichier_config):
@@ -63,11 +64,38 @@ def speedtest(ftp):
     print("Débit : {:.2f} Mo/s".format(debit))
 
 
+def ping_test(ftp):
+    # Get the server's IP address from the FTP connection
+    ip_address = ftp.sock.getpeername()[0]
+
+    # Get the current time before the ping test
+    start_time = time.time()
+
+    # Ping the server
+    try:
+        output = subprocess.check_output(["ping", "-n", "1", "-w", "5000", ip_address])
+        print("Ping successful!")
+    except subprocess.CalledProcessError:
+        print("Ping failed.")
+
+    # Get the current time after the ping test
+    end_time = time.time()
+
+    # Calculate the time taken for the ping test
+    ping_time = end_time - start_time
+
+    # Round the time to 2 decimal places
+    ping_time = round(ping_time, 2)
+
+    print(f"Time taken for ping: {ping_time} seconds")
+
+
 def menu_connexion(ftp):
     while True:
-        print("Menu de Connexion:")
+        print("===== Menu de Connexion: =====")
         print("0. Revenir au menu principal")
         print("1. SpeedTest")
+        print("2. Ping Test")
 
         choix = input("Votre choix : ")
         contenu = []
@@ -75,7 +103,11 @@ def menu_connexion(ftp):
         if choix == "0":
             break
         elif choix == "1":
+            print("===== SpeedTest =====")
             speedtest(ftp)
+        elif choix == "2":
+            print("===== Ping Test =====")
+            ping_test(ftp)
 
         else:
             print("Choix invalide, veuillez réessayer.")
