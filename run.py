@@ -24,7 +24,7 @@ def connexion_ftp(fichier_config):
         data = json.load(f)
 
     # Création d'une instance de la classe FTP
-    ftp = FTP()
+    ftp = ftplib.FTP()
 
     # Connexion au serveur FTP
     ftp.connect(data["ip"], int(data["port"]))
@@ -49,7 +49,7 @@ def new_ftp_server():
     nom_fichier = input("Nom personalisé du serveur : ")
 
     # Création du fichier de configuration
-    with open(os.path.join("serveursFTP", nom_fichier), "w") as f:
+    with open(os.path.join("serveursFTP", nom_fichier + ".json"), "w") as f:
         data = {
             "ip": ip,
             "port": port,
