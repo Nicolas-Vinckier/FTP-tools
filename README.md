@@ -1,5 +1,7 @@
 # FTP-tools
 
+> **Important** : Ce projet est en cours de développement et n'est pas encore fonctionnel.
+
 ## Description
 
 ## Installation
