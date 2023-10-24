@@ -74,7 +74,9 @@ def ping_test(ftp):
 
     # Ping the server
     try:
-        output = subprocess.check_output(["ping", "-n", "1", "-w", "5000", ip_address])
+        output = subprocess.check_output(
+            ["ping", "-n", "2", "-w", "5000", "-l", "1024", ip_address]
+        )
         print("Ping successful!")
     except subprocess.CalledProcessError:
         print("Ping failed.")
