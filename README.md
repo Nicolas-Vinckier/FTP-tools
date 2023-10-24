@@ -4,6 +4,17 @@
 
 ## Description
 
+Ce projet a pour but de fournir des outils pour faciliter la gestion de serveurs FTP.
+
+## Fonctionnalités
+
+- [ ] Recherche de fichiers
+- [ ] Téléchargement de fichiers
+- [ ] Upload de fichiers
+- [ ] Suppression de fichiers
+- [ ] Test de ping
+- [ ] Test de vitesse de téléchargement
+
 ## Installation
 
 ```bash
