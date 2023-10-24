@@ -1,6 +1,7 @@
 import os
 import json
 
+
 def new_ftp_server():
     # Saisie des informations du serveur FTP
     ip = input("IP du serveur FTP : ")
