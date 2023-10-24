@@ -39,17 +39,28 @@ def select_server():
 
 def speedtest(ftp):
     # Création d'un fichier de 1 Mo
-    with open("10Mo.txt", "wb") as f:
-        f.write(b"0" * 10000000)
+    with open("100Mo.txt", "wb") as f:
+        f.write(b"0" * 100000000)
 
     # Envoi du fichier sur le serveur FTP
-    ftp.storbinary("STOR 10Mo.txt", open("10Mo.txt", "rb"))
+    start = time.time()
+    ftp.storbinary("STOR 100Mo.txt", open("100Mo.txt", "rb"))
+    end = time.time()
 
     # Suppression du fichier sur le serveur FTP
-    ftp.delete("10Mo.txt")
+    ftp.delete("100Mo.txt")
 
     # Suppression du fichier en local
-    os.remove("10Mo.txt")
+    os.remove("100Mo.txt")
+
+    # Affichage du temps d'exécution
+    print("SpeedTest terminé en", end - start, "secondes.")
+
+    # Calcul du débit
+    debit = 100 / (end - start)
+
+    # Affichage du débit
+    print("Débit : {:.2f} Mo/s".format(debit))
 
 
 def menu_connexion(ftp):
@@ -64,18 +75,7 @@ def menu_connexion(ftp):
         if choix == "0":
             break
         elif choix == "1":
-            start = time.time()
             speedtest(ftp)
-            end = time.time()
-
-            # Affichage du temps d'exécution
-            print("SpeedTest terminé en", end - start, "secondes.")
-
-            # Calcul du débit
-            debit = 10 / (end - start)
-
-            # Affichage du débit
-            print("Débit : {:.2f} Mo/s".format(debit))
 
         else:
             print("Choix invalide, veuillez réessayer.")
