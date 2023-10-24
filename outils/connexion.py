@@ -55,14 +55,20 @@ def speedtest(ftp):
     # Suppression du fichier en local
     os.remove("100Mo.txt")
 
+    temps_test = end - start
+
+    temps_test = round(temps_test, 2)
+
     # Affichage du temps d'exécution
-    print("SpeedTest terminé en", end - start, "secondes.")
+    print("SpeedTest terminé en", temps_test, "secondes.")
 
     # Calcul du débit
     debit = 100 / (end - start)
 
+    debit = round(debit, 2)
+
     # Affichage du débit
-    print("Débit : {:.2f} Mo/s".format(debit))
+    print(f"Débit : {debit} Mo/s")
 
 
 def ping_test(ftp):
