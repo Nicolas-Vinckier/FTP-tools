@@ -40,12 +40,16 @@ def menu_connexion(ftp):
     while True:
         print("Menu de Connexion:")
         print("0. Revenir au menu principal")
+        print("1. Test de ping")
 
         choix = input("Votre choix : ")
         contenu = []
 
         if choix == "0":
             break
+        elif choix == "1":
+            # TODO
+            pass
         else:
             print("Choix invalide, veuillez réessayer.")
 
