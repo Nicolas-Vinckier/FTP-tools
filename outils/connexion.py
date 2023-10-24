@@ -48,7 +48,6 @@ def menu_connexion(ftp):
         if choix == "0":
             break
         elif choix == "1":
-            # TODO
             pass
         else:
             print("Choix invalide, veuillez réessayer.")
@@ -56,4 +55,4 @@ def menu_connexion(ftp):
 
 def main():
     # Affichage du menu de connexion
-    menu_connexion(ftp)
+    menu_connexion(None)
