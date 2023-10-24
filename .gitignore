@@ -1,6 +1,7 @@
 # Cache python & IDE
 __pycache__
 outils/__pycache__
+*.pyc
 .vscode 
 
 # Fichier de configuration des serveur FTP
@@ -9,3 +10,4 @@ serveursFTP
 # Environnement virtuel
 .venv
 venv
+
