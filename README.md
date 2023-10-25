@@ -10,8 +10,6 @@ FTP-tools est un ensemble d'outils conçus pour faciliter la gestion de serveurs
 
 - [ ] Recherche de fichiers
 - [ ] Téléchargement de fichiers
-- [ ] Upload de fichiers
-- [ ] Suppression de fichiers
 - [x] Test de ping
 - [x] Test de vitesse de téléchargement
 
