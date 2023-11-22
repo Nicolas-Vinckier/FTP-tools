@@ -18,6 +18,6 @@ FTP-tools est un ensemble d'outils conçus pour faciliter la gestion de serveurs
 ```bash
 pip install virtualenv
 virtualenv -p python3 venv
-source venv/bin/activate
+.\venv\Scripts\Activate
 pip install -r requirements.txt
 ```
